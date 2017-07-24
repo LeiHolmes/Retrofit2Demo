@@ -18,6 +18,11 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
+/**
+ * Description:   Retrofit2+RxJava1
+ * author         xulei
+ * Date           2017/7/24 17:59
+ */
 public class UseRxJavaActivity extends AppCompatActivity {
     TextView tvResult;
 
