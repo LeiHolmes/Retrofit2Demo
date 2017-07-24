@@ -1,4 +1,4 @@
-package com.aladdin.retrofit2demo.support;
+package com.LeiHolmes.retrofit2demo.support;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;

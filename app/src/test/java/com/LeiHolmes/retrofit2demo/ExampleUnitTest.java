@@ -1,4 +1,4 @@
-package com.aladdin.retrofit2demo;
+package com.LeiHolmes.retrofit2demo;
 
 import org.junit.Test;
 

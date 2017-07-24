@@ -1,14 +1,16 @@
-package com.aladdin.retrofit2demo;
+package com.LeiHolmes.retrofit2demo.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aladdin.retrofit2demo.bean.DataBean1;
-import com.aladdin.retrofit2demo.bean.DataBean2;
-import com.aladdin.retrofit2demo.net.NetWorkService;
+import com.LeiHolmes.retrofit2demo.R;
+import com.LeiHolmes.retrofit2demo.bean.DataBean1;
+import com.LeiHolmes.retrofit2demo.bean.DataBean2;
+import com.LeiHolmes.retrofit2demo.service.NetWorkService;
 
 import java.util.List;
 
@@ -20,15 +22,14 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BASE_URL = "https://api.github.com/";
-    private NetWorkService service;
     private TextView tvMain;
+    private NetWorkService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvMain = (TextView) findViewById(R.id.tv_main);
-
         //Retrofit2.0后只支持OkHttp请求也不用添加okhttp依赖，也可配置好OkHttpClient后传入Retrofit。
         //不准备自定义的话可以不进行任何OkHttp的配置
 //        OkHttpClient client = new OkHttpClient();
@@ -62,24 +63,16 @@ public class MainActivity extends AppCompatActivity {
         service = retrofit.create(NetWorkService.class);
     }
 
-    public void onClick(View view) {
-        method1();
-//        method2();
-    }
-
     /**
      * 一个参数
      */
     public void method1() {
         //请求参数
         String parameter1 = "basil2style";
-
         //调用生成的GitHubServcie向服务器异步发送请求
         Call<DataBean1> call = service.getData(parameter1);
-
         //同步请求,不可在主线程中调用。放入后台线程
 //       call.execute();
-        
         //异步请求
         call.enqueue(new Callback<DataBean1>() {
             @Override
@@ -96,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         });
         //每一个实例仅仅能够被使用一次，但是可以通过clone()函数创建一个新的可用的实例。 
 //        call.clone();
-        
         //能让正在进行的事务取消
 //        call.cancle();
     }
@@ -122,5 +114,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    /**
+     * 请求数据
+     */
+    public void onRequestClick(View view) {
+        method1();
+//        method2();
+    }
+
+    /**
+     * 跳转RxJava+Retrofit实例
+     */
+    public void onJumpClick(View view) {
+        startActivity(new Intent(this, UseRxJavaActivity.class));
     }
 }

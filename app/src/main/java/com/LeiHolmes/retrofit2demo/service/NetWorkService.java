@@ -1,7 +1,7 @@
-package com.aladdin.retrofit2demo.net;
+package com.LeiHolmes.retrofit2demo.service;
 
-import com.aladdin.retrofit2demo.bean.DataBean1;
-import com.aladdin.retrofit2demo.bean.DataBean2;
+import com.LeiHolmes.retrofit2demo.bean.DataBean1;
+import com.LeiHolmes.retrofit2demo.bean.DataBean2;
 
 import java.util.List;
 import java.util.Map;
