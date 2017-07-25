@@ -1,4 +1,4 @@
-package com.LeiHolmes.retrofit2demo.bean;
+package com.LeiHolmes.retrofit2demo.entity;
 
 import java.util.List;
 

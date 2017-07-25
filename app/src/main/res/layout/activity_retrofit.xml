@@ -7,23 +7,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_retrofit"
+        <TextView
+            android:id="@+id/tv_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onViewClicked"
-            android:text="Retroft" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Retrofit网络请求"
+            android:textColor="#111111" />
 
         <Button
-            android:id="@+id/bt_retrofit_rxjava"
+            android:id="@+id/bt_request"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:onClick="onViewClicked"
-            android:text="Retroft+RxJava" />
+            android:text="获取数据" />
     </LinearLayout>
 </RelativeLayout>

@@ -1,8 +1,7 @@
 package com.LeiHolmes.retrofit2demo.service;
 
-import com.LeiHolmes.retrofit2demo.bean.MovieEntity;
+import com.LeiHolmes.retrofit2demo.entity.MovieEntity;
 
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;

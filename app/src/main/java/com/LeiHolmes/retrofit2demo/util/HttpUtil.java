@@ -1,6 +1,6 @@
 package com.LeiHolmes.retrofit2demo.util;
 
-import com.LeiHolmes.retrofit2demo.bean.MovieEntity;
+import com.LeiHolmes.retrofit2demo.entity.MovieEntity;
 import com.LeiHolmes.retrofit2demo.service.MovieService;
 
 import java.util.concurrent.TimeUnit;

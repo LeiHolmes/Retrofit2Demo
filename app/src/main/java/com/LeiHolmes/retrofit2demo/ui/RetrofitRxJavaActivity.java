@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.LeiHolmes.retrofit2demo.R;
-import com.LeiHolmes.retrofit2demo.bean.MovieEntity;
+import com.LeiHolmes.retrofit2demo.entity.MovieEntity;
 import com.LeiHolmes.retrofit2demo.service.MovieService;
 import com.LeiHolmes.retrofit2demo.util.HttpUtil;
 
@@ -23,19 +23,19 @@ import rx.schedulers.Schedulers;
  * author         xulei
  * Date           2017/7/24 17:59
  */
-public class UseRxJavaActivity extends AppCompatActivity {
+public class RetrofitRxJavaActivity extends AppCompatActivity {
     TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_use_rx_java);
+        setContentView(R.layout.activity_retrofit_rxjava);
         tvResult = (TextView) findViewById(R.id.tv_result);
     }
 
     public void onRequestClicked(View view) {
-//        getMovie();
-        getMovieByUtil();
+        getMovie();
+//        getMovieByUtil();
     }
 
     /**
@@ -62,7 +62,7 @@ public class UseRxJavaActivity extends AppCompatActivity {
         Subscriber<MovieEntity> subscriber = new Subscriber<MovieEntity>() {
             @Override
             public void onCompleted() {
-                Toast.makeText(UseRxJavaActivity.this, "获取数据完毕", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RetrofitRxJavaActivity.this, "获取数据完毕", Toast.LENGTH_SHORT).show();
             }
 
             @Override

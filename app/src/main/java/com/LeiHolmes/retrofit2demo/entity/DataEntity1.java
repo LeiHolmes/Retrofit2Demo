@@ -1,31 +1,43 @@
-package com.LeiHolmes.retrofit2demo.bean;
+package com.LeiHolmes.retrofit2demo.entity;
 
 /**
  * Description:
  * author         xulei
  * Date           16/4/27
  */
-public class DataBean2 {
+public class DataEntity1 {
 
     /**
-     * login : JakeWharton
-     * id : 66577
-     * avatar_url : https://avatars.githubusercontent.com/u/66577?v=3
+     * login : basil2style
+     * id : 1285344
+     * avatar_url : https://avatars.githubusercontent.com/u/1285344?v=3
      * gravatar_id : 
-     * url : https://api.github.com/users/JakeWharton
-     * html_url : https://github.com/JakeWharton
-     * followers_url : https://api.github.com/users/JakeWharton/followers
-     * following_url : https://api.github.com/users/JakeWharton/following{/other_user}
-     * gists_url : https://api.github.com/users/JakeWharton/gists{/gist_id}
-     * starred_url : https://api.github.com/users/JakeWharton/starred{/owner}{/repo}
-     * subscriptions_url : https://api.github.com/users/JakeWharton/subscriptions
-     * organizations_url : https://api.github.com/users/JakeWharton/orgs
-     * repos_url : https://api.github.com/users/JakeWharton/repos
-     * events_url : https://api.github.com/users/JakeWharton/events{/privacy}
-     * received_events_url : https://api.github.com/users/JakeWharton/received_events
+     * url : https://api.github.com/users/basil2style
+     * html_url : https://github.com/basil2style
+     * followers_url : https://api.github.com/users/basil2style/followers
+     * following_url : https://api.github.com/users/basil2style/following{/other_user}
+     * gists_url : https://api.github.com/users/basil2style/gists{/gist_id}
+     * starred_url : https://api.github.com/users/basil2style/starred{/owner}{/repo}
+     * subscriptions_url : https://api.github.com/users/basil2style/subscriptions
+     * organizations_url : https://api.github.com/users/basil2style/orgs
+     * repos_url : https://api.github.com/users/basil2style/repos
+     * events_url : https://api.github.com/users/basil2style/events{/privacy}
+     * received_events_url : https://api.github.com/users/basil2style/received_events
      * type : User
      * site_admin : false
-     * contributions : 761
+     * name : Basil
+     * company : MakeInfo
+     * blog : http://www.themakeinfo.com
+     * location : Peterborough,ON,Canada
+     * email : basiltalias92@gmail.com
+     * hireable : true
+     * bio : null
+     * public_repos : 44
+     * public_gists : 4
+     * followers : 48
+     * following : 145
+     * created_at : 2011-12-26T00:17:22Z
+     * updated_at : 2016-04-25T22:24:37Z
      */
 
     private String login;
@@ -45,7 +57,19 @@ public class DataBean2 {
     private String received_events_url;
     private String type;
     private boolean site_admin;
-    private int contributions;
+    private String name;
+    private String company;
+    private String blog;
+    private String location;
+    private String email;
+    private boolean hireable;
+    private Object bio;
+    private int public_repos;
+    private int public_gists;
+    private int followers;
+    private int following;
+    private String created_at;
+    private String updated_at;
 
     public String getLogin() {
         return login;
@@ -183,17 +207,114 @@ public class DataBean2 {
         this.site_admin = site_admin;
     }
 
-    public int getContributions() {
-        return contributions;
+    public String getName() {
+        return name;
     }
 
-    public void setContributions(int contributions) {
-        this.contributions = contributions;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getBlog() {
+        return blog;
+    }
+
+    public void setBlog(String blog) {
+        this.blog = blog;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isHireable() {
+        return hireable;
+    }
+
+    public void setHireable(boolean hireable) {
+        this.hireable = hireable;
+    }
+
+    public Object getBio() {
+        return bio;
+    }
+
+    public void setBio(Object bio) {
+        this.bio = bio;
+    }
+
+    public int getPublic_repos() {
+        return public_repos;
+    }
+
+    public void setPublic_repos(int public_repos) {
+        this.public_repos = public_repos;
+    }
+
+    public int getPublic_gists() {
+        return public_gists;
+    }
+
+    public void setPublic_gists(int public_gists) {
+        this.public_gists = public_gists;
+    }
+
+    public int getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(int followers) {
+        this.followers = followers;
+    }
+
+    public int getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(int following) {
+        this.following = following;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        
+        this.updated_at = updated_at;
     }
 
     @Override
     public String toString() {
-        return "DataBean2{" +
+        return "DataEntity1{" +
                 "login='" + login + '\'' +
                 ", id=" + id +
                 ", avatar_url='" + avatar_url + '\'' +
@@ -211,7 +332,19 @@ public class DataBean2 {
                 ", received_events_url='" + received_events_url + '\'' +
                 ", type='" + type + '\'' +
                 ", site_admin=" + site_admin +
-                ", contributions=" + contributions +
+                ", name='" + name + '\'' +
+                ", company='" + company + '\'' +
+                ", blog='" + blog + '\'' +
+                ", location='" + location + '\'' +
+                ", email='" + email + '\'' +
+                ", hireable=" + hireable +
+                ", bio=" + bio +
+                ", public_repos=" + public_repos +
+                ", public_gists=" + public_gists +
+                ", followers=" + followers +
+                ", following=" + following +
+                ", created_at='" + created_at + '\'' +
+                ", updated_at='" + updated_at + '\'' +
                 '}';
     }
 }
