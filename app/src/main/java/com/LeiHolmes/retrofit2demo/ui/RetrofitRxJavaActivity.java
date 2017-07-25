@@ -25,6 +25,7 @@ import rx.schedulers.Schedulers;
  */
 public class RetrofitRxJavaActivity extends AppCompatActivity {
     TextView tvResult;
+    Subscriber<MovieEntity> subscriber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,14 @@ public class RetrofitRxJavaActivity extends AppCompatActivity {
     }
 
     public void onRequestClicked(View view) {
-        getMovie();
-//        getMovieByUtil();
+//        getMovie();
+        getMovieByUtil();
+    }
+
+    public void onCancleClicked(View view) {
+        //想取消请求直接取消订阅即可
+        if (subscriber != null)
+            subscriber.unsubscribe();
     }
 
     /**
@@ -59,7 +66,7 @@ public class RetrofitRxJavaActivity extends AppCompatActivity {
      * 使用HttpUtil获取电影数据
      */
     private void getMovieByUtil() {
-        Subscriber<MovieEntity> subscriber = new Subscriber<MovieEntity>() {
+        subscriber = new Subscriber<MovieEntity>() {
             @Override
             public void onCompleted() {
                 Toast.makeText(RetrofitRxJavaActivity.this, "获取数据完毕", Toast.LENGTH_SHORT).show();

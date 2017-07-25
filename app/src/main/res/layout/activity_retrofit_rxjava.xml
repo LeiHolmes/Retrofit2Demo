@@ -20,12 +20,21 @@
             android:textColor="#111111" />
 
         <Button
-            android:id="@+id/bt_click_me"
+            android:id="@+id/bt_request"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRequestClicked"
             android:padding="5dp"
             android:text="获取数据"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCancleClicked"
+            android:padding="5dp"
+            android:text="取消请求"
             android:textSize="16sp" />
     </LinearLayout>
 </RelativeLayout>
