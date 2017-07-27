@@ -121,6 +121,6 @@ call.enqueue(new Callback<DataBean>() {
 　　Get注解：　@GET("basil2style")  
 　　结果URL：　https://api.github.com/repos/square/basil2style
 ### 总结
-　　Retrofit2.0的基本实现讲解完毕，Retrofit+Okhttp+Gson可以算是目前来说相当快的超级网络请求框架了。相比较于Volley都快不少，亲测结果很爽。小伙伴们赶紧整起来吧！
+　　Retrofit2.0的基本实现讲解完毕，Retrofit+Okhttp+Gson可以算是目前来说相当快的超级网络请求框架了。相比较于Volley都快不少，亲测结果很爽。小伙伴们赶紧整起来吧！  
 　　技术渣一枚，有写的不对的地方欢迎大神们留言指正，有什么疑惑或者不懂的地方也可以在Issues中提出，我会及时解答。
 
