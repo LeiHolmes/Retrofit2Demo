@@ -34,7 +34,7 @@ Retrofit retrofit = new Retrofit.Builder()
 ```java
 .addConverterFactory(GsonConverterFactory.create())
 ```
-　　Retrofit2.0不提供返回JSON数据的默认解析方式，需要手动指定，支持Jackson等多种解析方式。需要哪种就添加相应的依赖，这里添加的是Retrofit提供的converter-gson依赖。有点不爽的就是不支持FastJson解析，有需要的话可以自己写一个FastjsonConverterFactory继承Converter.Factory实现。
+　　Retrofit2.0不提供返回JSON数据的默认解析方式，需要手动指定，支持Jackson等多种解析方式。需要哪种就添加相应的依赖，这里添加的是Retrofit提供的converter-gson依赖。有点不爽的就是不支持FastJson解析，有需要的话可以自己写一个FastjsonConverterFactory继承Converter.Factory实现。  
 　　虽然Retrofit2.0后只支持okhttp请求，但你也可以自定义一个okhttp再配置进Retrofit。
 ```java
 OkHttpClient client = new OkHttpClient();
@@ -68,13 +68,13 @@ Call<List<DataBean2>> getData(
         @Path("params2") String params2,
 );
 ```
-　　当我们调用getData()这个方法的时候，Retrofit会创建这个URL。如果我们传入Square和Retrofit字符串，分别作为owner和repo参数。我们就会得到这个URL：https://api.github.com/repos/square/retrofit/contributors
+　　当我们调用getData()这个方法的时候，Retrofit会创建这个URL。如果我们传入Square和Retrofit字符串，分别作为owner和repo参数。我们就会得到这个URL：https://api.github.com/repos/square/retrofit/contributors  
 　　添加查询参数
 ```java
 @GET("repos/square/{retrofit}/contributors")
 Call<List<DataBean2>> groupData(@Path("retrofit") String retrofit, @Query("sort") String sort);
 ```
-　　当我们调用getData()方法时，传入一个查询参数字符串"ok",这样我们就能得到URL：https://api.github.com/repos/square/retrofit/contributors?sort=ok
+　　当我们调用getData()方法时，传入一个查询参数字符串"ok",这样我们就能得到URL：https://api.github.com/repos/square/retrofit/contributors?sort=ok  
 　　当然如果查询参数过多，我们也可以使用Map进行组合再传进来。
 ```java
 @GET("repos/square/{retrofit}/contributors")
