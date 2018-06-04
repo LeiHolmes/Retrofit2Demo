@@ -7,7 +7,7 @@
 　　现已更新到2.0的版本，与1.0版本的使用上还是不小的差别，我也是第一次用，这里主要和大家研究研究2.0版本简单使用。也可参详[官方示例](http://square.github.io/retrofit/)。
 <!--more-->  
 ### 准备工作
-#### 添加权限
+#### 添加权限 
 　　首先添加网络请求权限
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
